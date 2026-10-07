@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Portfolio | Filipe Teixeira Marchesi</title>
+ <link rel="stylesheet" href="style.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+ <!-- ========== HEADER ========== -->
+ <header id="header">
+ <nav class="nav container">
+ <a href="#" class="nav__logo">
+ Filipe<span class="logo-dot">.</span>
+ </a>
+ <ul class="nav__menu" id="nav-menu">
+ <li><a href="#sobre" class="nav__link">Sobre Mim</a></li>
+ <li><a href="#projetos" class="nav__link">Trabalhos</a></li>
+ <li><a href="#experiencia" class="nav__link">Trajetória</a></li>
+ <li><a href="#stack" class="nav__link">Habilidades</a></li>
+ <li><a href="#certificados" class="nav__link">Formacao</a></li>
+ <li><a href="#contato" class="nav__link nav__link--cta">Contato</a></li>
+ <li>
+ <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
+ <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+ <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+ </button>
+ </li>
+ </ul>
+ <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu">
+ <span></span><span></span><span></span>
+ </button>
+ </nav>
+ </header>
+
+ <main>
+ <!-- ========== HERO ========== -->
+ <section id="hero" class="hero">
+ <div class="hero__particles" id="particles"></div>
+ <div class="container hero__container">
+ <div class="hero__content">
+ <p class="hero__greeting animate-fade-up">Olá, eu sou</p>
+ <h1 class="hero__name animate-fade-up delay-1">Filipe Teixeira Marchesi</h1>
+ <h2 class="hero__title animate-fade-up delay-2">
+ <span class="typed-text" id="typed-text"></span>
+ <span class="cursor">|</span>
+ </h2>
+ <p class="hero__description animate-fade-up delay-3">
+ Técnico em Eletroeletrônica em formação acadêmica em Mecatrônica Industrial, com interesse em oportunidades na área de eletrônica industrial, manutenção, automação e desenvolvimento de projetos técnicos.
+ </p>
+ <div class="hero__actions animate-fade-up delay-4">
+ <a href="#projetos" class="btn btn--primary">Ver Trabalhos</a>
+ <a href="#contato" class="btn btn--outline">Fale Comigo</a>
+ </div>
+ <div class="hero__social animate-fade-up delay-5">
+ <a href="mailto:filipe.tmarchesi@gmail.com" class="social-link" aria-label="Email" target="_blank">
+ <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 2 8 6 8-6H4z"/></svg>
+ </a>
+ <a href="https://wa.me/5512983038504" class="social-link" aria-label="WhatsApp" target="_blank">
+ <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+ </a>
+ </div>
+ </div>
+ <div class="hero__image animate-fade-up delay-3">
+ <div class="hero__avatar">
+ <div class="avatar-ring"></div>
+ <img src="assets/images/profile/foto.png" alt="Foto de perfil" onerror="this.style.display='none'">
+ <div class="avatar-placeholder">
+ <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ <a href="#sobre" class="hero__scroll" aria-label="Rolar para baixo">
+ <div class="mouse">
+ <div class="mouse__wheel"></div>
+ </div>
+ </a>
+ </section>
+
+ <!-- ========== SOBRE MIM ========== -->
+ <section id="sobre" class="section sobre">
+ <div class="container">
+ <h2 class="section__title reveal">
+ Sobre <span class="highlight">Mim</span>
+ </h2>
+ <div class="sobre__grid">
+ <div class="sobre__image reveal reveal--left">
+ <div class="image-card">
+ <img src="assets/images/profile/foto-sobre.png" alt="Foto sobre mim" onerror="this.parentElement.innerHTML='<div class=image-placeholder><svg xmlns=http://www.w3.org/2000/svg width=60 height=60 viewBox=0 0 24 24 fill=none stroke=currentColor stroke-width=1><path d=M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2/><circle cx=12 cy=7 r=4/></svg></div>'">
+ </div>
+ <div class="image-card__decoration"></div>
+ </div>
+ <div class="sobre__content reveal reveal--right">
+ <h3 class="sobre__subtitle">Técnico em Eletrônica e futuro profissional em automação</h3>
+ <p class="sobre__text">
+ Tenho 19 anos e sou de São José dos Campos. Sou técnico em Eletroeletrônica formado pelo SENAI de São José dos Campos e atualmente curso Tecnólogo em Mecatrônica Industrial pelo SENAI de Taubaté.
+ </p>
+ <p class="sobre__text">
+ Procuro uma oportunidade voltada à eletrônica para me profissionalizar, desenvolver minhas habilidades e contribuir com soluções técnicas em manutenção, automação e projetos elétricos.
+ </p>
+ <div class="sobre__stats">
+ <div class="stat">
+ <span class="stat__number" data-count="19">0</span>
+ <span class="stat__suffix">+</span>
+ <span class="stat__label">Anos de idade</span>
+ </div>
+ <div class="stat">
+ <span class="stat__number" data-count="2">0</span>
+ <span class="stat__suffix">+</span>
+ <span class="stat__label">Etapas de formação</span>
+ </div>
+ <div class="stat">
+ <span class="stat__number" data-count="1">0</span>
+ <span class="stat__suffix">+</span>
+ <span class="stat__label">Experiência profissional</span>
+ </div>
+ </div>
+ <a href="Currículo.pdf" download class="btn btn--primary btn--download" id="btn-curriculo">
+ <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+ Baixar Curriculo
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ========== TRABALHOS ========== -->
+ <section id="projetos" class="section projetos">
+ <div class="container">
+ <h2 class="section__title reveal">
+ Principais <span class="highlight">Trabalhos</span>
+ </h2>
+ <p class="section__subtitle reveal">Uma selecao dos meus trabalhos mais recentes</p>
+
+ <!-- Filtros -->
+ <div class="projetos__filtros reveal">
+ <button class="filtro-btn active" data-filter="todos">Todos</button>
+ <button class="filtro-btn" data-filter="profissional">Profissional</button>
+ <button class="filtro-btn" data-filter="academico">Academico</button>
+ <button class="filtro-btn" data-filter="pessoal">Pessoal</button>
+ <button class="filtro-btn" data-filter="voluntario">Voluntario</button>
+ </div>
+
+ <div class="projetos__grid">
+ <!-- Trabalho 1 -->
+ <article class="projeto-card reveal" data-category="profissional">
+ <div class="projeto-card__image">
+ <!-- Substitua pela imagem do projeto -->
+ <img src="assets/images/projects/projeto-1.png" alt="Campanha Publicitaria" onerror="this.parentElement.innerHTML='<div class=project-placeholder><svg xmlns=http://www.w3.org/2000/svg width=48 height=48 viewBox=0 0 24 24 fill=none stroke=currentColor stroke-width=1><rect x=3 y=3 width=18 height=18 rx=2 ry=2/><circle cx=8.5 cy=8.5 r=1.5/><polyline points=21 15 16 10 5 21/></svg></div>'">
+ <div class="projeto-card__overlay">
+ <a href="#" class="projeto-card__link" target="_blank" aria-label="Ver Detalhes">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+ </a>
+ <a href="#" class="projeto-card__link" target="_blank" aria-label="Ver Projeto">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+ </a>
+ </div>
+ </div>
+ <div class="projeto-card__content">
+ <h3 class="projeto-card__title">Campanha Publicitaria</h3>
+ <p class="projeto-card__description">Campanha estrategica de comunicacao com foco em alcance e engajamento do publico-alvo.</p>
+ <div class="projeto-card__tags">
+ <span class="tag">Marketing</span>
+ <span class="tag">Estrategia</span>
+ <span class="tag">Comunicacao</span>
+ </div>
+ </div>
+ </article>
+
+ <!-- Trabalho 2 -->
+ <article class="projeto-card reveal" data-category="academico">
+ <div class="projeto-card__image">
+ <img src="assets/images/projects/projeto-2.png" alt="Projeto de Pesquisa" onerror="this.parentElement.innerHTML='<div class=project-placeholder><svg xmlns=http://www.w3.org/2000/svg width=48 height=48 viewBox=0 0 24 24 fill=none stroke=currentColor stroke-width=1><rect x=3 y=3 width=18 height=18 rx=2 ry=2/><circle cx=8.5 cy=8.5 r=1.5/><polyline points=21 15 16 10 5 21/></svg></div>'">
+ <div class="projeto-card__overlay">
+ <a href="#" class="projeto-card__link" target="_blank" aria-label="Ver Detalhes">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+ </a>
+ <a href="#" class="projeto-card__link" target="_blank" aria-label="Ver Projeto">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+ </a>
+ </div>
+ </div>
+ <div class="projeto-card__content">
+ <h3 class="projeto-card__title">Projeto de Pesquisa</h3>
+ <p class="projeto-card__description">Pesquisa aprofundada com metodologia rigorosa e resultados publicaveis.</p>
+ <div class="projeto-card__tags">
+ <span class="tag">Pesquisa</span>
+ <span class="tag">Analise</span>
+ <span class="tag">Metodologia</span>
+ </div>
+ </div>
+ </article>
+
+ <!-- Trabalho 3 -->
+ <article class="projeto-card reveal" data-category="profissional">
+ <div class="projeto-card__image">
+ <img src="assets/images/projects/projeto-3.png" alt="Consultoria Empresarial" onerror="this.parentElement.innerHTML='<div class=project-placeholder><svg xmlns=http://www.w3.org/2000/svg width=48 height=48 viewBox=0 0 24 24 fill=none stroke=currentColor stroke-width=1><rect x=3 y=3 width=18 height=18 rx=2 ry=2/><circle cx=8.5 cy=8.5 r=1.5/><polyline points=21 15 16 10 5 21/></svg></div>'">
+ <div class="projeto-card__overlay">
+ <a href="#" class="projeto-card__link" target="_blank" aria-label="Ver Detalhes">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+ </a>
+ <a href="#" class="projeto-card__link" target="_blank" aria-label="Ver Projeto">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+ </a>
+ </div>
+ </div>
+ <div class="projeto-card__content">
+ <h3 class="projeto-card__title">Consultoria Empresarial</h3>
+ <p class="projeto-card__description">Diagnostico organizacional e plano de acao para melhoria de processos e resultados.</p>
+ <div class="projeto-card__tags">
+ <span class="tag">Gestao</span>
+ <span class="tag">Planejamento</span>
+ <span class="tag">Estrategia</span>
+ </div>
+ </div>
+ </article>
+
+ <!-- Trabalho 4 -->
+ <article class="projeto-card reveal" data-category="pessoal">
+ <div class="projeto-card__image">
+ <img src="assets/images/projects/projeto-4.png" alt="Identidade Visual" onerror="this.parentElement.innerHTML='<div class=project-placeholder><svg xmlns=http://www.w3.org/2000/svg width=48 height=48 viewBox=0 0 24 24 fill=none stroke=currentColor stroke-width=1><rect x=3 y=3 width=18 height=18 rx=2 ry=2/><circle cx=8.5 cy=8.5 r=1.5/><polyline points=21 15 16 10 5 21/></svg></div>'">
+ <div class="projeto-card__overlay">
+ <a href="#" class="projeto-card__link" target="_blank" aria-label="Ver Detalhes">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+ </a>
+ <a href="#" class="projeto-card__link" target="_blank" aria-label="Ver Projeto">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+ </a>
+ </div>
+ </div>
+ <div class="projeto-card__content">
+ <h3 class="projeto-card__title">Identidade Visual</h3>
+ <p class="projeto-card__description">Desenvolvimento completo de identidade visual com manual de marca e aplicacoes.</p>
+ <div class="projeto-card__tags">
+ <span class="tag">Design</span>
+ <span class="tag">Comunicacao</span>
+ <span class="tag">Criatividade</span>
+ </div>
+ </div>
+ </article>
+
+ <!-- Trabalho 5 -->
+ <article class="projeto-card reveal" data-category="profissional">
+ <div class="projeto-card__image">
+ <img src="assets/images/projects/projeto-5.png" alt="Evento Corporativo" onerror="this.parentElement.innerHTML='<div class=project-placeholder><svg xmlns=http://www.w3.org/2000/svg width=48 height=48 viewBox=0 0 24 24 fill=none stroke=currentColor stroke-width=1><rect x=3 y=3 width=18 height=18 rx=2 ry=2/><circle cx=8.5 cy=8.5 r=1.5/><polyline points=21 15 16 10 5 21/></svg></div>'">
+ <div class="projeto-card__overlay">
+ <a href="#" class="projeto-card__link" target="_blank" aria-label="Ver Detalhes">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+ </a>
+ <a href="#" class="projeto-card__link" target="_blank" aria-label="Ver Projeto">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+ </a>
+ </div>
+ </div>
+ <div class="projeto-card__content">
+ <h3 class="projeto-card__title">Evento Corporativo</h3>
+ <p class="projeto-card__description">Planejamento e execucao de evento corporativo com gestao completa de logistica e comunicacao.</p>
+ <div class="projeto-card__tags">
+ <span class="tag">Planejamento</span>
+ <span class="tag">Lideranca</span>
+ <span class="tag">Gestao</span>
+ </div>
+ </div>
+ </article>
+
+ <!-- Trabalho 6 -->
+ <article class="projeto-card reveal" data-category="voluntario">
+ <div class="projeto-card__image">
+ <img src="assets/images/projects/projeto-6.png" alt="Relatorio Anual" onerror="this.parentElement.innerHTML='<div class=project-placeholder><svg xmlns=http://www.w3.org/2000/svg width=48 height=48 viewBox=0 0 24 24 fill=none stroke=currentColor stroke-width=1><rect x=3 y=3 width=18 height=18 rx=2 ry=2/><circle cx=8.5 cy=8.5 r=1.5/><polyline points=21 15 16 10 5 21/></svg></div>'">
+ <div class="projeto-card__overlay">
+ <a href="#" class="projeto-card__link" target="_blank" aria-label="Ver Detalhes">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+ </a>
+ <a href="#" class="projeto-card__link" target="_blank" aria-label="Ver Projeto">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+ </a>
+ </div>
+ </div>
+ <div class="projeto-card__content">
+ <h3 class="projeto-card__title">Relatorio Anual</h3>
+ <p class="projeto-card__description">Elaboracao de relatorio anual com indicadores de desempenho e analise estrategica.</p>
+ <div class="projeto-card__tags">
+ <span class="tag">Analise</span>
+ <span class="tag">Comunicacao</span>
+ <span class="tag">Estrategia</span>
+ </div>
+ </div>
+ </article>
+ </div>
+ </div>
+ </section>
+
+ <!-- ========== TRAJETÓRIA ========== -->
+ <section id="experiencia" class="section experiencia" aria-labelledby="experiencia-title">
+ <div class="container">
+ <h2 id="experiencia-title" class="section__title reveal">Minha <span class="highlight">Trajetória</span></h2>
+ <p class="section__subtitle reveal">Experiência profissional e formação acadêmica</p>
+ <ol class="timeline">
+ <li class="timeline__item reveal reveal--left">
+ <div class="timeline__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+ <div class="timeline__card">
+ <div class="timeline__header"><span class="timeline__type">Trabalho</span><span class="timeline__date">2026</span></div>
+ <h3 class="timeline__title">Técnico Eletroeletrônico</h3>
+ <p class="timeline__org">SERVNEWS - Jacareí</p>
+ <p class="timeline__desc">Manutenção, diagnóstico, calibração e programação de robôs industriais, além de trabalho técnico em eletrônica aplicada à produção e automação.</p>
+ <div class="timeline__tags"><span>Manutenção</span><span>Robótica</span><span>Diagnóstico</span></div>
+ </div>
+ </li>
+ <li class="timeline__item reveal reveal--right">
+ <div class="timeline__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+ <div class="timeline__card">
+ <div class="timeline__header"><span class="timeline__type">Formação</span><span class="timeline__date">2025 — 2027</span></div>
+ <h3 class="timeline__title">Tecnólogo em Mecatrônica Industrial</h3>
+ <p class="timeline__org">SENAI Félix Guisard - Taubaté</p>
+ <p class="timeline__desc">Curso superior em andamento, com foco em automação, sistemas mecatrônicos e tecnologia aplicada à produção industrial.</p>
+ <div class="timeline__tags"><span>Mecatrônica</span><span>Automação</span><span>Industrial</span></div>
+ </div>
+ </li>
+ <li class="timeline__item reveal reveal--left">
+ <div class="timeline__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 9 10-5 10 5-10 5-10-5Z"/><path d="M6 11v6c4 3 8 3 12 0v-6M22 9v6"/></svg></div>
+ <div class="timeline__card">
+ <div class="timeline__header"><span class="timeline__type">Formação</span><span class="timeline__date">2023 — 2024</span></div>
+ <h3 class="timeline__title">Técnico em Eletroeletrônica</h3>
+ <p class="timeline__org">SENAI Santos Dumont - São José dos Campos</p>
+ <p class="timeline__desc">Formação técnica com base em circuitos, comandos elétricos, instalações, manutenção e desenvolvimento de projetos de eletrônica industrial.</p>
+ <div class="timeline__tags"><span>Eletrônica</span><span>Comandos elétricos</span><span>Projetos</span></div>
+ </div>
+ </li>
+ </ol>
+ </div>
+ </section>
+
+ <!-- ========== HABILIDADES ========== -->
+ <section id="stack" class="section stack">
+ <div class="container">
+ <h2 class="section__title reveal">
+ <span class="highlight">Habilidades</span>
+ </h2>
+ <p class="section__subtitle reveal">Competências técnicas e comportamentais da minha formação</p>
+
+ <div class="competencias reveal" aria-labelledby="competencias-title">
+ <h3 id="competencias-title" class="competencias__title">Competências principais</h3>
+ <p class="competencias__intro">Habilidades que mais se conectam com a minha atuação profissional.</p>
+ <ul class="competencias__grid">
+ <li class="competencias__item"><h4>Eletrônica</h4><p>Conhecimento em circuitos lógicos, sistemas elétricos e manutenção de equipamentos.</p></li>
+ <li class="competencias__item"><h4>Comandos elétricos</h4><p>Aplicação em instalações elétricas e projeto de circuitos para automação industrial.</p></li>
+ <li class="competencias__item"><h4>CLP e automação</h4><p>Programação em ladder, grafcet e construção de FBs para automação industrial.</p></li>
+ <li class="competencias__item"><h4>Desenhos técnicos</h4><p>Leitura e desenvolvimento de diagramas e desenhos eletroeletrônicos.</p></li>
+ <li class="competencias__item"><h4>Trabalho em equipe</h4><p>Colaboração em ambientes de produção e aprendizado contínuo com foco no resultado.</p></li>
+ <li class="competencias__item"><h4>Abordagem lógica</h4><p>Resolução de problemas com foco em diagnóstico, raciocínio técnico e eficiência.</p></li>
+ </ul>
+ </div>
+
+ <div class="stack__categories">
+ <div class="stack__category reveal">
+ <h3 class="stack__category-title">
+ <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--clr-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+ Técnicas
+ </h3>
+ <div class="stack__items">
+ <div class="stack__item"><div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg></div><span>Eletrônica</span></div>
+ <div class="stack__item"><div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg></div><span>Comandos elétricos</span></div>
+ <div class="stack__item"><div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h18"/><path d="M7 10V7h10v3"/><path d="M7 17V9h10v8"/></svg></div><span>Instalações elétricas</span></div>
+ <div class="stack__item"><div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v10H4z"/><path d="M8 11h8"/></svg></div><span>CLP / Ladder / Grafcet</span></div>
+ <div class="stack__item"><div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7h8M8 12h8M8 17h6"/><path d="M6 4h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg></div><span>Desenhos técnicos</span></div>
+ </div>
+ </div>
+
+ <div class="stack__category reveal">
+ <h3 class="stack__category-title">
+ <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--clr-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+ Programação
+ </h3>
+ <div class="stack__items">
+ <div class="stack__item"><div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8l-4 4 4 4"/><path d="M16 8l4 4-4 4"/><path d="M14 4l-4 16"/></svg></div><span>C++</span></div>
+ <div class="stack__item"><div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v10H4z"/><path d="M8 11h8"/></svg></div><span>FBs / PLC</span></div>
+ <div class="stack__item"><div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M12 3v18"/></svg></div><span>Automação</span></div>
+ </div>
+ </div>
+
+ <div class="stack__category reveal">
+ <h3 class="stack__category-title">
+ <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--clr-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+ Comportamentais
+ </h3>
+ <div class="stack__items">
+ <div class="stack__item"><div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><span>Bom ouvinte</span></div>
+ <div class="stack__item"><div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><span>Trabalho em equipe</span></div>
+ <div class="stack__item"><div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14.5a3.5 3.5 0 0 1 0 7H6"/></svg></div><span>Abordagem lógica</span></div>
+ <div class="stack__item"><div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/><circle cx="12" cy="12" r="9"/></svg></div><span>Aprendizado contínuo</span></div>
+ </div>
+ </div>
+
+ <div class="stack__category reveal">
+ <h3 class="stack__category-title">
+ <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--clr-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+ Idiomas
+ </h3>
+ <div class="stack__items">
+ <div class="stack__item"><div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><span>Inglês básico</span></div>
+ <div class="stack__item"><div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><span>Português nativo</span></div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ========== FORMACAO ========== -->
+ <section id="certificados" class="section certificados">
+ <div class="container">
+ <h2 class="section__title reveal">
+ <span class="highlight">Formacao</span>
+ </h2>
+ <p class="section__subtitle reveal">Minha formação, qualificações e competências técnicas</p>
+
+ <div class="certificados__grid">
+ <div class="certificado-card reveal">
+ <div class="certificado-card__badge">
+ <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+ </div>
+ <div class="certificado-card__content">
+ <h3 class="certificado-card__title">Tecnólogo em Mecatrônica Industrial</h3>
+ <p class="certificado-card__issuer">SENAI Félix Guisard - Taubaté</p>
+ <span class="certificado-card__date">2025 - 2027</span>
+ </div>
+ <a href="#" class="certificado-card__link" target="_blank" aria-label="Ver certificação">
+ <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+ </a>
+ </div>
+
+ <div class="certificado-card reveal">
+ <div class="certificado-card__badge">
+ <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+ </div>
+ <div class="certificado-card__content">
+ <h3 class="certificado-card__title">Técnico em Eletroeletrônica</h3>
+ <p class="certificado-card__issuer">SENAI Santos Dumont - São José dos Campos</p>
+ <span class="certificado-card__date">2023 - 2024</span>
+ </div>
+ <a href="#" class="certificado-card__link" target="_blank" aria-label="Ver certificação">
+ <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+ </a>
+ </div>
+
+ <div class="certificado-card reveal">
+ <div class="certificado-card__badge">
+ <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+ </div>
+ <div class="certificado-card__content">
+ <h3 class="certificado-card__title">Inglês básico</h3>
+ <p class="certificado-card__issuer">Qualificação pessoal</p>
+ <span class="certificado-card__date">2025</span>
+ </div>
+ <a href="#" class="certificado-card__link" target="_blank" aria-label="Ver certificado">
+ <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+ </a>
+ </div>
+
+ <div class="certificado-card reveal">
+ <div class="certificado-card__badge">
+ <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+ </div>
+ <div class="certificado-card__content">
+ <h3 class="certificado-card__title">Painel elétrico NR12</h3>
+ <p class="certificado-card__issuer">Projeto técnico</p>
+ <span class="certificado-card__date">2025</span>
+ </div>
+ <a href="#" class="certificado-card__link" target="_blank" aria-label="Ver certificado">
+ <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ========== CONTATO ========== -->
+ <section id="contato" class="section contato">
+ <div class="container">
+ <h2 class="section__title reveal">
+ Entre em <span class="highlight">Contato</span>
+ </h2>
+ <p class="section__subtitle reveal">Vamos conversar sobre oportunidades na área de eletrônica e automação?</p>
+
+ <aside class="disponibilidade reveal" aria-labelledby="disponibilidade-title">
+ <h3 id="disponibilidade-title" class="disponibilidade__title">Disponibilidade</h3>
+ <p>Aberto para oportunidades profissionais relacionadas a eletrônica, automação, manutenção industrial e projetos técnicos.</p>
+ <dl class="disponibilidade__details">
+ <div><dt>Oportunidades</dt><dd>Vagas, estágios, projetos e parcerias na área técnica.</dd></div>
+ <div><dt>Modalidade de trabalho</dt><dd>Presencial, híbrido ou remoto, conforme a oportunidade.</dd></div>
+ </dl>
+ </aside>
+
+ <div class="contato__grid">
+ <div class="contato__info reveal">
+ <div class="contato__card">
+ <a href="mailto:filipe.tmarchesi@gmail.com" class="contato__item">
+ <div class="contato__icon">
+ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+ </div>
+ <div>
+ <h4>Email</h4>
+ <p>filipe.tmarchesi@gmail.com</p>
+ </div>
+ </a>
+
+ <a href="https://wa.me/5512983038504" class="contato__item" target="_blank">
+ <div class="contato__icon contato__icon--whatsapp">
+ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+ </div>
+ <div>
+ <h4>WhatsApp</h4>
+ <p>(12) 98303-8504</p>
+ </div>
+ </a>
+
+ <a href="https://www.google.com/maps/search/S%C3%A3o+Jos%C3%A9+dos+Campos+-+SP" class="contato__item" target="_blank">
+ <div class="contato__icon contato__icon--github">
+ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4.35 8-10a8 8 0 1 0-16 0c0 5.65 8 10 8 10z"/><circle cx="12" cy="12" r="3"/></svg>
+ </div>
+ <div>
+ <h4>Localização</h4>
+ <p>Parque Industrial, São José dos Campos - SP</p>
+ </div>
+ </a>
+ </div>
+
+ <div class="contato__cv">
+ <a href="Currículo.pdf" download class="btn btn--primary btn--full btn--download">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
+ Baixar Curriculo (PDF)
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+ </main>
+
+ <footer class="footer">
+ <div class="container footer__container">
+ <p class="footer__text">
+ Filipe Teixeira Marchesi<span class="logo-dot">.</span>
+ &mdash; Feito com dedicacao
+ </p>
+ <p class="footer__copy">&copy; 2026 Todos os direitos reservados</p>
+ </div>
+ </footer>
+
+ <!-- Back to top -->
+ <button class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">
+ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+ </button>
+
+ <script src="script.js"></script>
+</body>
+</html>
